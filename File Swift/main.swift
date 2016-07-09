@@ -1,12 +1,12 @@
-//
-//  main.swift
-//  File Swift
-//
-//  Created by Daniel Illescas Romero on 09/07/16.
-//  Copyright © 2016 Daniel Illescas Romero. All rights reserved.
-//
-
 import Foundation
 
-print("Hello, World!")
+// let location = "/Users/Daniel/Documents"
+let documentsDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
 
+save("Test.txt", to: documentsDirectory) {
+	"This is a test\n" +
+	"This is the second line"
+}
+
+let fileContent = read("Test.txt", from: documentsDirectory)
+print(fileContent)
