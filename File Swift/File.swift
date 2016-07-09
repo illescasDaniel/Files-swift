@@ -1,11 +1,9 @@
 import Foundation
 
 func save(file: String, to: String, content: () -> String) {
-	
-	let path = to + "/" + file
-	
+
 	do {
-		try content().writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding)
+		try content().writeToFile("\(to)/\(file)", atomically: true, encoding: NSUTF8StringEncoding)
 	}
 	catch {
 		print(error)
@@ -13,15 +11,15 @@ func save(file: String, to: String, content: () -> String) {
 }
 
 func read(file: String, from: String) -> String {
-	
-	var content: String = String()
-	
+
+	var content = String()
+
 	do {
-		content = try String(contentsOfFile: from + "/" + file)
+		content = try String(contentsOfFile: "\(from)/\(file)")
 	}
 	catch {
 		print(error)
 	}
-	
+
 	return content
 }
