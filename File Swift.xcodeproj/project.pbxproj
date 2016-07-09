@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		65B5EE191D3150F00086FF17 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		65B5EE1B1D3153760086FF17 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "File Swift/README.md"; sourceTree = "<group>"; };
+		65B5EE1D1D3154DB0086FF17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		65E433B21D312F61005496F7 /* File Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "File Swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E433B51D312F61005496F7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,7 +44,7 @@
 		65E433A91D312F61005496F7 = {
 			isa = PBXGroup;
 			children = (
-				65B5EE1B1D3153760086FF17 /* README.md */,
+				65B5EE1D1D3154DB0086FF17 /* README.md */,
 				65E433B41D312F61005496F7 /* File Swift */,
 				65E433B31D312F61005496F7 /* Products */,
 			);

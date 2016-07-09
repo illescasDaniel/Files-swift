@@ -6,7 +6,7 @@ Simpler way to manage files.
 
 ```swift
 save(file: String, to: String){
-	// content()
+// content()
 }
 ```
 
