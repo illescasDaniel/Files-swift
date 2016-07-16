@@ -3,7 +3,6 @@
 Simpler way to manage files.
 
 · Save function syntax:
-
 ```swift
 save(file: String, to: String){
 // content()
@@ -11,6 +10,11 @@ save(file: String, to: String){
 ```
 
 · Read function syntax:
+```swift
+read(file: String, from: String)
+```
+
+· Remove file function syntax:
 ```swift
 read(file: String, from: String)
 ```
