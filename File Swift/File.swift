@@ -31,8 +31,8 @@ func remove(file: String, from: String) {
 	do {
 		try fileManager.removeItemAtPath("\(from)/\(file)")
 	}
-	catch let error as NSError {
-		print("Ooops! Something went wrong: \(error)")
+	catch {
+		print(error)
 	}
 }
 
