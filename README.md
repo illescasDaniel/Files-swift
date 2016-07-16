@@ -16,5 +16,5 @@ read(file: String, from: String)
 
 · Remove file function syntax:
 ```swift
-read(file: String, from: String)
+remove(file: String, from: String)
 ```
