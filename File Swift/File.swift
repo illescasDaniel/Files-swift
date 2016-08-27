@@ -3,7 +3,7 @@ import Foundation
 func save(file: String, to: String, content: () -> String) {
 	
 	do {
-		try content().writeToFile("\(to)/\(file)", atomically: true, encoding: NSUTF8StringEncoding)
+		try content().write(toFile: "\(to)/\(file)", atomically: true, encoding: String.Encoding.utf8)
 	}
 	catch {
 		print(error)
@@ -26,10 +26,8 @@ func read(file: String, from: String) -> String {
 
 func remove(file: String, from: String) {
 	
-	let fileManager = NSFileManager.defaultManager()
-	
 	do {
-		try fileManager.removeItemAtPath("\(from)/\(file)")
+		try FileManager.default.removeItem(atPath: "\(from)/\(file)")
 	}
 	catch {
 		print(error)
@@ -37,5 +35,5 @@ func remove(file: String, from: String) {
 }
 
 func documentsDirectory() -> String {
-	return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+	return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 }
