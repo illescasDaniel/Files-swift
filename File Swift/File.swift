@@ -1,21 +1,21 @@
 import Foundation
 
-func save(file: String, to: String, content: () -> String) {
+func save(file: String, to directory: String, content: () -> String) {
 	
 	do {
-		try content().write(toFile: "\(to)/\(file)", atomically: true, encoding: String.Encoding.utf8)
+		try content().write(toFile: "\(directory)/\(file)", atomically: true, encoding: String.Encoding.utf8)
 	}
 	catch {
 		print(error)
 	}
 }
 
-func read(file: String, from: String) -> String {
+func read(file: String, from directory: String) -> String {
 	
 	var content = String()
 	
 	do {
-		content = try String(contentsOfFile: "\(from)/\(file)")
+		content = try String(contentsOfFile: "\(directory)/\(file)")
 	}
 	catch {
 		print(error)
@@ -24,10 +24,10 @@ func read(file: String, from: String) -> String {
 	return content
 }
 
-func remove(file: String, from: String) {
+func remove(file: String, from directory: String) {
 	
 	do {
-		try FileManager.default.removeItem(atPath: "\(from)/\(file)")
+		try FileManager.default.removeItem(atPath: "\(directory)/\(file)")
 	}
 	catch {
 		print(error)
