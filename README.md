@@ -2,19 +2,22 @@
 
 Simpler way to manage files.
 
-· Save function syntax:
+· Save:
 ```swift
-save(file: String, to: String){
-// content()
-}
+File.save(_ content:, to: URL?)
 ```
 
-· Read function syntax:
+· Read:
 ```swift
-read(file: String, from: String)
+File.read(from: URL?)
 ```
 
-· Remove file function syntax:
+· Remove:
 ```swift
-remove(file: String, from: String)
+File.remove(at: URL?)
+```
+
+· Copy:
+```swift
+File.copy(file: URL?, to: URL?)
 ```
